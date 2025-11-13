@@ -1,0 +1,7 @@
+project_id = "vdlowozpadcajwtuufka"
+
+[functions.create-booking]
+verify_jwt = false
+
+[functions.send-booking-email]
+verify_jwt = false
