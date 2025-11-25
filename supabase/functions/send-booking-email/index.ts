@@ -47,7 +47,7 @@ const handler = async (req: Request): Promise<Response> => {
         "Authorization": `Bearer ${RESEND_API_KEY}`,
       },
       body: JSON.stringify({
-        from: "VR Transport <onboarding@resend.dev>",
+        from: "Vrtransports49 <vrtransports49@vrtransports.com>",
         to: ["vrtransport49@gmail.com"],
         subject: "🚛 New Booking Received - VR Transport",
         html: `
