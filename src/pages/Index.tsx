@@ -16,6 +16,7 @@ import gravelImage from '@/assets/gravel.jpg';
 import bluemetal20Image from '@/assets/bluemetal20.jpg';
 import bluemetal40Image from '@/assets/bluemetal40.jpg';
 import bricksImage from '@/assets/bricks.jpg';
+import WhatsAppButton from '@/components/WhatsAppButton';
 
 const WHATSAPP_NUMBER = '+6594606260';
 
@@ -158,7 +159,8 @@ const Index = () => {
         selectedProducts={getSelectedProducts()}
         onConfirm={handleConfirmBooking}
       />
-      <FloatingWhatsApp />
+      {/* <FloatingWhatsApp /> */}
+      <WhatsAppButton />
       <PWAInstallPrompt />
       
       <Footer />
