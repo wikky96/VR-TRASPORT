@@ -43,7 +43,7 @@ export const Header = () => {
               {t('header.title')}
             </h1>
             <p className="text-[9px] md:text-[10px] text-muted-foreground">
-              Quality Construction Materials
+              {t('header.companySub')}
             </p>
           </div>
         </div>

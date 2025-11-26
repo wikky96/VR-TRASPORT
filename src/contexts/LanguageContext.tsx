@@ -12,6 +12,7 @@ const translations = {
   en: {
     'header.title': 'VR Transport',
     'header.ticker': '🚛 Quality Construction Materials • Fast Delivery • Competitive Prices • Trusted by 1000+ Customers • 📞 80566 55272',
+    'header.companySub' : 'Quality Construction Materials',
     'products.title': 'Our Products',
     'products.msand': 'M-Sand',
     'products.psand': 'P-Sand',
@@ -42,10 +43,14 @@ const translations = {
     'pwa.install': 'Install App',
     'pwa.message': 'Install VR Transport for quick access',
     'whatsapp.chat': 'Chat with us on WhatsApp',
+    'whatsapp.hover' : 'Chat our WhatsApp',
+    'whatsapp.message' : 'Hello, I’m reaching out from the VR Transports website. Please share information about rates, delivery time, and availability of construction materials.',
+    
   },
   ta: {
     'header.title': 'VR டிரான்ஸ்போர்ட்',
     'header.ticker': '🚛 தரமான கட்டுமானப் பொருட்கள் • விரைவான டெலிவரி • போட்டி விலை • 1000+ வாடிக்கையாளர்கள் நம்பிக்கை • 📞 80566 55272',
+    'header.companySub' : 'உங்களுக்கான உயர்தர கட்டுமானப் பொருட்கள்',
     'products.title': 'எங்கள் தயாரிப்புகள்',
     'products.msand': 'எம்-சாண்ட்',
     'products.psand': 'பி-சாண்ட்',
@@ -76,6 +81,8 @@ const translations = {
     'pwa.install': 'ஆப்ஸை நிறுவவும்',
     'pwa.message': 'விரைவான அணுகலுக்கு VR டிரான்ஸ்போர்ட்டை நிறுவவும்',
     'whatsapp.chat': 'வாட்ஸ்அப்பில் எங்களுடன் அரட்டையடிக்கவும்',
+    'whatsapp.hover' : 'WhatsApp-ல் தொடர்பு கொள்ளுங்கள்',
+    'whatsapp.message' : 'வணக்கம், VR Transports இணையதளம் மூலம் தொடர்பு கொள்கிறேன். கட்டுமான பொருட்கள் தொடர்பான தகவல்களை வழங்க முடியுமா?',
   },
 };
 
