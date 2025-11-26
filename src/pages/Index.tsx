@@ -145,7 +145,8 @@ const Index = () => {
                 className="bg-gradient-to-r from-primary to-accent hover:opacity-90 rounded-full px-8 shadow-2xl text-lg font-bold glow-effect hover:scale-105 transition-all"
               >
                 <ShoppingCart className="mr-2 h-5 w-5" />
-                {t('booking.button')} ({getTotalQuantity()})
+                {t('booking.button')}
+                 {/* ({getTotalQuantity()}) */}
               </Button>
             </div>
           )}
