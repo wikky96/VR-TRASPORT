@@ -10,7 +10,7 @@ interface LanguageContextType {
 
 const translations = {
   en: {
-    'header.title': 'VR Transport',
+    'header.title': 'Transport',
     'header.ticker': '🚛 Quality Construction Materials • Fast Delivery • Competitive Prices • Trusted by 1000+ Customers 📞 6380724731 / 8056892227',
     'header.companySub' : 'Quality Construction Materials',
     'products.title': 'Our Products',
@@ -48,7 +48,7 @@ const translations = {
     
   },
   ta: {
-    'header.title': 'VR டிரான்ஸ்போர்ட்',
+    'header.title': 'டிரான்ஸ்போர்ட்',
     'header.ticker': '🚛 தரமான கட்டுமானப் பொருட்கள் • விரைவான டெலிவரி • போட்டி விலை • 1000+ வாடிக்கையாளர்கள் நம்பிக்கை • 📞 6380724731 / 8056892227',
     'header.companySub' : 'உயர்தர கட்டுமானப் பொருட்கள்',
     'products.title': 'எங்கள் தயாரிப்புகள்',

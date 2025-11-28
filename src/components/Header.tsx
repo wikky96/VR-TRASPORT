@@ -12,7 +12,7 @@ export const Header = () => {
   const [qrDialogOpen, setQrDialogOpen] = useState(false);
 
   // Generate QR code URL using API
-  const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodeURIComponent('https://vrtransports.com')}`;
+  const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodeURIComponent('https://vrtransports49.com')}`;
 
   const downloadQRCode = () => {
     const link = document.createElement('a');
@@ -72,7 +72,7 @@ export const Header = () => {
         {/* Contact Icons & Language Switcher */}
         <div className="flex items-center gap-1 md:gap-2">
           {/* Email */}
-          <a href="mailto:vrtransports@gmail.com" title="Email Us">
+          <a href="mailto:vrtransports49@gmail.com" title="Email Us">
             <Button variant="ghost" size="icon" className="h-8 w-8">
               <Mail className="h-4 w-4" />
             </Button>
@@ -114,7 +114,7 @@ export const Header = () => {
                     or download it for later use
                   </p>
                   <p className="text-xs font-semibold text-primary">
-                    vrtransports@gmail.com
+                    vrtransports49@gmail.com
                   </p>
                 </div>
 
