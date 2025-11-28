@@ -11,7 +11,7 @@ interface LanguageContextType {
 const translations = {
   en: {
     'header.title': 'VR Transport',
-    'header.ticker': '🚛 Quality Construction Materials • Fast Delivery • Competitive Prices • Trusted by 1000+ Customers • 📞 80566 55272',
+    'header.ticker': '🚛 Quality Construction Materials • Fast Delivery • Competitive Prices • Trusted by 1000+ Customers 📞 6380724731 / 8056892227',
     'header.companySub' : 'Quality Construction Materials',
     'products.title': 'Our Products',
     'products.msand': 'M-Sand',
@@ -49,8 +49,8 @@ const translations = {
   },
   ta: {
     'header.title': 'VR டிரான்ஸ்போர்ட்',
-    'header.ticker': '🚛 தரமான கட்டுமானப் பொருட்கள் • விரைவான டெலிவரி • போட்டி விலை • 1000+ வாடிக்கையாளர்கள் நம்பிக்கை • 📞 80566 55272',
-    'header.companySub' : 'உங்களுக்கான உயர்தர கட்டுமானப் பொருட்கள்',
+    'header.ticker': '🚛 தரமான கட்டுமானப் பொருட்கள் • விரைவான டெலிவரி • போட்டி விலை • 1000+ வாடிக்கையாளர்கள் நம்பிக்கை • 📞 6380724731 / 8056892227',
+    'header.companySub' : 'உயர்தர கட்டுமானப் பொருட்கள்',
     'products.title': 'எங்கள் தயாரிப்புகள்',
     'products.msand': 'எம்-சாண்ட்',
     'products.psand': 'பி-சாண்ட்',

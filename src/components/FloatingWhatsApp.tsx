@@ -2,7 +2,7 @@ import { MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 
-const WHATSAPP_NUMBER = '+6594606260';
+const WHATSAPP_NUMBER = '+91 6380724731';
 
 export const FloatingWhatsApp = () => {
   const { t } = useLanguage();
