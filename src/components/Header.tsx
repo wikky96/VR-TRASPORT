@@ -12,7 +12,7 @@ export const Header = () => {
   const [qrDialogOpen, setQrDialogOpen] = useState(false);
 
   // Generate QR code URL using API
-  const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodeURIComponent('https://vrtransports49.com')}`;
+  const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodeURIComponent('https://vrtransports.com')}`;
 
   const downloadQRCode = () => {
     const link = document.createElement('a');
