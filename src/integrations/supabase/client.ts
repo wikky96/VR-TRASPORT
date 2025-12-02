@@ -18,7 +18,7 @@ export const supabase = createClient<Database>(SUPABASE_URL, SUPABASE_PUBLISHABL
 });
 
 export const APP_CONFIG = {
-  VERSION: '1.0.0', // Update this when you release new versions
+  VERSION: '1.0.1', // Update this when you release new versions
   NAME: 'VR Transports',
   DESCRIPTION: 'Order Management System',
 } as const;

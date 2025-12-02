@@ -1,4 +1,4 @@
-const CACHE_NAME = 'vr-transports-v1.0.0'; // Update this with each version
+const CACHE_NAME = 'vr-transports-v1.0.1'; // Update this with each version
 const urlsToCache = [
   '/',
   '/index.html',
