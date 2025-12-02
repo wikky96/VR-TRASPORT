@@ -2,8 +2,9 @@ import { useState, useEffect } from 'react';
 import { Download, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { APP_CONFIG } from '@/integrations/supabase/client';
 
-const APP_VERSION = '1.0.0'; // Update this when you release new versions
+const APP_VERSION = APP_CONFIG.VERSION; // Update this when you release new versions
 
 interface BeforeInstallPromptEvent extends Event {
   prompt: () => Promise<void>;
@@ -32,18 +33,24 @@ const getDeviceInfo = () => {
 const trackPWAInstall = async () => {
   try {
     const userId = generateUserId();
-    const response = await fetch('https://hyenscttndcerngyuqzl.supabase.co/functions/v1/track-pwa-install', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
+    const { supabase } = await import('@/integrations/supabase/client');
+    
+    // CORRECT: Only pass the function name
+    const { data, error } = await supabase.functions.invoke('track-pwa-install', {
+      body: {
         userId,
         deviceInfo: getDeviceInfo(),
         appVersion: APP_VERSION,
         action: 'install',
-      }),
+      },
     });
     
-    if (response.ok) {
+    if (error) {
+      console.error('Error tracking installation:', error);
+      return;
+    }
+    
+    if (data?.success) {
       localStorage.setItem('pwa-installed', 'true');
       localStorage.setItem('pwa-version', APP_VERSION);
     }

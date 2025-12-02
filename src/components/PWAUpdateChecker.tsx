@@ -2,12 +2,25 @@ import { useState, useEffect } from 'react';
 import { RefreshCw, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
+import { APP_CONFIG } from '@/integrations/supabase/client';
 
-const APP_VERSION = '1.0.0'; // Must match the version in PWAInstallPrompt
+const APP_VERSION = APP_CONFIG.VERSION; // Must match the version in PWAInstallPrompt
+
+// Extend Navigator interface for iOS PWA detection
+interface ExtendedNavigator extends Navigator {
+  standalone?: boolean;
+}
+
+interface UpdateInfo {
+  needsUpdate: boolean;
+  latestVersion: string;
+  description: string;
+  isMandatory: boolean;
+}
 
 export const PWAUpdateChecker = () => {
   const [updateAvailable, setUpdateAvailable] = useState(false);
-  const [updateInfo, setUpdateInfo] = useState<any>(null);
+  const [updateInfo, setUpdateInfo] = useState<UpdateInfo | null>(null);
   const [showAlert, setShowAlert] = useState(false);
 
   const checkForUpdates = async () => {
@@ -15,19 +28,24 @@ export const PWAUpdateChecker = () => {
       const userId = localStorage.getItem('pwa-user-id');
       if (!userId) return;
 
-      const response = await fetch('https://hyenscttndcerngyuqzl.supabase.co/functions/v1/track-pwa-install', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
+      // ✅ Import Supabase client dynamically
+      const { supabase } = await import('@/integrations/supabase/client');
+
+      // ✅ CORRECT: Use Supabase client with function name only (no hardcoded URL)
+      const { data, error } = await supabase.functions.invoke('track-pwa-install', {
+        body: {
           userId,
           appVersion: APP_VERSION,
           action: 'check-update',
-        }),
+        },
       });
 
-      const data = await response.json();
+      if (error) {
+        console.error('Error checking for updates:', error);
+        return;
+      }
       
-      if (data.needsUpdate) {
+      if (data?.needsUpdate) {
         setUpdateInfo(data);
         setUpdateAvailable(true);
         setShowAlert(true);
@@ -42,7 +60,10 @@ export const PWAUpdateChecker = () => {
 
   useEffect(() => {
     // Check if app is installed (standalone mode)
-    if (window.matchMedia('(display-mode: standalone)').matches) {
+    const isStandalone = window.matchMedia('(display-mode: standalone)').matches;
+    const isPWA = (window.navigator as ExtendedNavigator).standalone === true; // iOS
+    
+    if (isStandalone || isPWA) {
       // Check for updates on mount
       checkForUpdates();
       
@@ -62,8 +83,17 @@ export const PWAUpdateChecker = () => {
             // Reload the page to get the new version
             window.location.reload();
           });
+        } else {
+          // If no service worker, just reload
+          window.location.reload();
         }
+      }).catch(() => {
+        // Fallback: just reload
+        window.location.reload();
       });
+    } else {
+      // No service worker support, just reload
+      window.location.reload();
     }
   };
 
@@ -78,7 +108,8 @@ export const PWAUpdateChecker = () => {
     localStorage.setItem('update-dismissed-until', dismissUntil.toString());
   };
 
-  if (!showAlert || !updateAvailable) return null;
+  // Don't show if no update available
+  if (!showAlert || !updateAvailable || !updateInfo) return null;
 
   return (
     <div className="fixed top-20 left-4 right-4 md:left-auto md:right-8 md:w-96 z-50 animate-slide-down">
@@ -88,12 +119,12 @@ export const PWAUpdateChecker = () => {
             <div className="flex items-center gap-2 mb-2">
               <RefreshCw className="h-5 w-5 text-primary" />
               <AlertTitle className="text-lg font-bold">
-                {updateInfo?.isMandatory ? 'Required Update' : 'Update Available'}
+                {updateInfo.isMandatory ? 'Required Update' : 'Update Available'}
               </AlertTitle>
             </div>
             <AlertDescription className="text-sm mb-3">
-              <p className="mb-2">Version {updateInfo?.latestVersion} is now available!</p>
-              {updateInfo?.description && (
+              <p className="mb-2">Version {updateInfo.latestVersion} is now available!</p>
+              {updateInfo.description && (
                 <p className="text-muted-foreground">{updateInfo.description}</p>
               )}
             </AlertDescription>
@@ -106,7 +137,7 @@ export const PWAUpdateChecker = () => {
                 <RefreshCw className="mr-2 h-4 w-4" />
                 Update Now
               </Button>
-              {!updateInfo?.isMandatory && (
+              {!updateInfo.isMandatory && (
                 <Button
                   onClick={handleDismiss}
                   variant="outline"
@@ -117,7 +148,7 @@ export const PWAUpdateChecker = () => {
               )}
             </div>
           </div>
-          {!updateInfo?.isMandatory && (
+          {!updateInfo.isMandatory && (
             <Button
               variant="ghost"
               size="icon"
