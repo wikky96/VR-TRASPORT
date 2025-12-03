@@ -122,7 +122,7 @@ export const ProductModal = ({
               onClick={handleSave}
               className="flex-1 bg-gradient-to-r from-primary to-accent"
             >
-              Save
+             {t('booking.save')}
             </Button>
           </div>
         </div>

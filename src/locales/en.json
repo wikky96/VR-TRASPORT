@@ -1,0 +1,126 @@
+{
+  "header": {
+    "title": "Transport",
+    "ticker": "🚛 Quality Construction Materials • Fast Delivery • Competitive Prices • Trusted by 1000+ Customers 📞 6380724731 / 8056892227",
+    "companySub": "Quality Construction Materials"
+  },
+  "products": {
+    "title": "Our Products",
+    "msand": "M-Sand",
+    "psand": "P-Sand",
+    "riversand": "River Sand",
+    "dust": "Dust",
+    "6mmchips": "6 mm Chips Blue Metal",
+    "bluemetal20": "Blue Metal 20mm",
+    "bluemetal40": "Blue Metal 40mm",
+    "gravel": "Gravel",
+    "bricks": "Bricks",
+    "redgravel": "Red Gravel",
+    "redsoil": "Red Soil",
+    "unit": "Unit",
+    "quantity": "Quantity"
+  },
+  "booking": {
+    "button": "Book Now",
+    "title": "Confirm Your Booking",
+    "summary": "Order Summary",
+    "mobile": "Mobile Number",
+    "mobilePlaceholder": "Enter your mobile number",
+    "name": "Name (Optional)",
+    "namePlaceholder": "Enter your name",
+    "confirm": "Confirm Booking",
+    "cancel": "Cancel",
+    "success": "Booking confirmed! We will contact you shortly.",
+    "error": "Please enter a valid mobile number",
+    "phoneRequired": "Phone number is required",
+    "phoneInvalid": "Please enter a valid 10-digit number starting with 6-9",
+    "save" : "Save"
+  },
+  "pwa": {
+    "install": "Install App",
+    "message": "Install VR Transport for quick access"
+  },
+  "whatsapp": {
+    "chat": "Chat with us on WhatsApp",
+    "hover": "Chat our WhatsApp",
+    "message": "Hello, I'm reaching out from the VR Transports website. Please share information about rates, delivery time, and availability of construction materials."
+  },
+  "order": {
+    "header": {
+      "title": "Order Tracking",
+      "subtitle_mobile": "Track your orders easily",
+      "subtitle_desktop": "Search and track your orders using your registered mobile number"
+    },
+    "search": {
+      "title": "Search Orders",
+      "mobile_label": "Mobile Number",
+      "mobile_placeholder": "Enter mobile number",
+      "mobile_hint": "Enter the mobile number you used during checkout",
+      "button_search": "Search Orders",
+      "button_search_mobile": "Search",
+      "button_searching": "Searching...",
+      "validation_error": "Please enter a valid mobile number"
+    },
+    "results": {
+      "no_orders_title": "No Orders Found",
+      "no_orders_message": "We couldn't find any orders associated with this mobile number. Please verify and try again.",
+      "orders_found": "{{count}} Order Found",
+      "orders_found_plural": "{{count}} Orders Found",
+      "showing_all": "Showing all orders for this number"
+    },
+    "order_card": {
+      "order_number": "Order Number",
+      "order_date": "Order Date",
+      "status_delivered": "Delivered",
+      "status_pending": "Pending",
+      "status_paid": "Paid",
+      "status_unpaid": "Unpaid",
+      "customer_info": "Customer Information",
+      "customer_name": "Name",
+      "customer_phone": "Phone",
+      "order_items": "Order Items",
+      "order_items_count": "Order Items ({{count}})",
+      "quantity": "Quantity"
+    },
+    "error": {
+      "fetch_failed": "Failed to load bookings"
+    }
+  },
+  "footer": {
+    "brand": {
+      "name": "VR Transport",
+      "tagline": "Quality Materials",
+      "description": "Your trusted partner in construction materials and transport solutions."
+    },
+    "sections": {
+      "quick_links": {
+        "title": "Quick Links",
+        "links": {
+          "about": "About Us",
+          "services": "Services",
+          "products": "Products",
+          "contact": "Contact"
+        }
+      },
+      "services": {
+        "title": "Services",
+        "links": {
+          "transport": "Transport",
+          "logistics": "Logistics",
+          "material_supply": "Material Supply",
+          "custom_orders": "Custom Orders"
+        }
+      },
+      "contact": {
+        "title": "Contact Us",
+        "whatsapp": "WhatsApp"
+      }
+    }
+  },
+  "sideMenu":{
+    "products" : "Our Products",
+    "orders" : "Your Orders",
+    "menu": "Menu",
+    "navigate": "Navigate"
+  }
+}

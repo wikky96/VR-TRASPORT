@@ -24,9 +24,9 @@ export const Header = () => {
   };
 
   const menuItems = [
-    { icon: Home, label: 'Products', path: '/' },
-    { icon: ShoppingBag, label: 'Your Orders', path: '/orders' },
-  ];
+  { icon: Home, label: t('sideMenu.products'), path: '/' },
+  { icon: ShoppingBag, label: t('sideMenu.orders'), path: '/orders' },
+];
 
   return (
     <header className="sticky top-0 z-50 glass-effect shadow-lg">
@@ -48,8 +48,8 @@ export const Header = () => {
                     <span className="text-lg font-bold text-white">VR</span>
                   </div>
                   <div>
-                    <h2 className="font-bold text-lg">Menu</h2>
-                    <p className="text-xs text-muted-foreground">Navigate</p>
+                    <h2 className="font-bold text-lg">{t('sideMenu.menu')}</h2>
+                    <p className="text-xs text-muted-foreground">{t('sideMenu.navigate')}</p>
                   </div>
                 </div>
               </div>
