@@ -64,8 +64,8 @@
     "results": {
       "no_orders_title": "No Orders Found",
       "no_orders_message": "We couldn't find any orders associated with this mobile number. Please verify and try again.",
-      "orders_found": "{{count}} Order Found",
-      "orders_found_plural": "{{count}} Orders Found",
+      "orders_found": "Order Found",
+      "orders_found_plural": "Orders Found",
       "showing_all": "Showing all orders for this number"
     },
     "order_card": {
@@ -78,8 +78,8 @@
       "customer_info": "Customer Information",
       "customer_name": "Name",
       "customer_phone": "Phone",
-      "order_items": "Order Items",
-      "order_items_count": "Order Items ({{count}})",
+      "order_items": "Order Items ",
+      "order_items_count": "Order Items ",
       "quantity": "Quantity"
     },
     "error": {

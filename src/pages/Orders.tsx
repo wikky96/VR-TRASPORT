@@ -160,7 +160,7 @@ const Orders = () => {
                 <div className="mb-4 sm:mb-6 flex items-center justify-between">
                   <div>
                     <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900">
-                      {t(orders.length === 1 ? 'order.results.orders_found' : 'order.results.orders_found_plural', { count: orders.length })}
+                     {orders.length} {t(orders.length === 1 ? 'order.results.orders_found' : 'order.results.orders_found_plural')}
                     </h2>
                     <p className="text-xs sm:text-sm text-gray-500 mt-1">
                       {t('order.results.showing_all')}
@@ -308,7 +308,7 @@ const Orders = () => {
                                 <Box className="w-5 h-5 text-accent" />
                               </div>
                               <h3 className="text-sm font-bold text-gray-900 uppercase tracking-wide">
-                                {t('order.order_card.order_items_count', { count: order.products.length })}
+                                {t('order.order_card.order_items_count')} {order.products.length}
                               </h3>
                             </div>
                             
